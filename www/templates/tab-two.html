@@ -1,0 +1,26 @@
+<!-- input tab for all your foods -->
+<ion-view view-title="Input">
+  <ion-content>
+      
+        <!-- Asks for input of food name -->
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Enter Food Name:</span>
+                <input type="text" ng-model="data.name" placeholder="Eg.Chocolate">
+            </label>
+        </div>
+      
+      <!-- asks for input of food calorie number -->
+      <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Number of Calories: </span>
+                <input type="text" ng-model="data.calories" placeholder="Eg.0-9999">
+          </label>
+      </div>
+      
+   
+            <!-- button to confirm food entry onto the application -->
+        <button class="button button-block button-balanced" ng-click="add(data.name, data.calories)">Add Food</button>
+        
+  </ion-content>
+</ion-view>

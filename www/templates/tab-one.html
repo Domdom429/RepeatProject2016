@@ -1,0 +1,38 @@
+
+<!-- food displays tab -->
+<ion-view view-title="Food">
+  <ion-content>
+       <ion-list>
+           
+        <!-- displays the total food calorie amount -->
+    <h3>  Total Calories: {{ data.total }}</h3> 
+      <ion-item ng-repeat="task in data.tasks">
+        
+          <!-- displays the food you have entered -->
+        <h3>Food Eaten: {{ task.name }}</h3>
+          <br />
+        
+          <!-- displays the food calorie amount -->
+        <h3>Food Calorie Amount: {{ task.calories }} </h3>
+          
+          <!-- displays date and time  -->
+        <h3>Added: {{ task.date | date:'yyyy-MM-dd HH:mm:ss' }} </h3>
+          
+           
+          <!-- your delete button to delete wanted entry of food -->
+        <div class="col text-right">
+            <button class="button button-assertive" ng-click="deleteTask(data)"> 
+            Remove Entry
+            </button>
+            <button class="button button-calm" ng-click="copy(task.name, task.calories)"> 
+            Copy Entry
+            </button>
+        </div>
+          
+          
+
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
